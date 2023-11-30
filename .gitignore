@@ -1,0 +1,8 @@
+.idea
+.DS_Store
+.vs_code
+.env
+.venv
+logs
+legacy
+__pycache__
