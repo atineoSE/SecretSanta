@@ -66,23 +66,24 @@ A log will be created in your computer with the pairs, in case you need to audit
 ## How to use the Secret Santa python app
 
 1. Clone this repo.
-2. Add your Google account details in the environment: `ADMIN_USER` and `APP_PASSWORD`. You can use a `.env` file at the root directory for convenience.
+1. Install dependencies with `pip install -r requirement.txt` (a [virtual environment](https://virtualenv.pypa.io/en/latest/) is recommended).
+1. Add your Google account details in the environment: `ADMIN_USER` and `APP_PASSWORD`. You can use a `.env` file at the root directory for convenience.
     - `ADMIN_USER` is your Google account username. Emails will be sent as if written by this user.
     - `APP_PASSWORD` is your app-specific password. See instructions below on how to get your own app password.
-3. Add your desired language to the environment variable `LANG`. Only "ES" (for Spanish) and "EN" (for English) are supported. Default is "ES".
-4. Customize the email template at `app/email_templates.py`, if needed. This will be the format of the email sent to the participants.
-5. Add participant names and emails in `app/participants.py`. Follow the example there. It is recommended that you copy and paste email addresses directly from your address book, to avoid typos.
-6. Add exclusions in `app/participants.py`, if needed. An exclusion is a person or group of people that one participant should not have to give presents to. For instance, if we want Bob to be able to give presents to everyone except Anna or Scott, then we can add "Bob": "Anna, Scott" to the exclusions dictionary. If too many exclusions are given, it may not be possible to find matching pairs for all participants. If not all participants can be matched, an error will be raised. You can then try again or reduce exclusions.
-7. Run the app with `python app/main.py` from the terminal.
+1. Add your desired language to the environment variable `LANG`. Only "ES" (for Spanish) and "EN" (for English) are supported. Default is "ES".
+1. Customize the email template at `app/email_templates.py`, if needed. This will be the format of the email sent to the participants.
+1. Add participant names and emails in `app/participants.py`. Follow the example there. It is recommended that you copy and paste email addresses directly from your address book, to avoid typos.
+1. Add exclusions in `app/participants.py`, if needed. An exclusion is a person or group of people that one participant should not have to give presents to. For instance, if we want Bob to be able to give presents to everyone except Anna or Scott, then we can add "Bob": "Anna, Scott" to the exclusions dictionary. If too many exclusions are given, it may not be possible to find matching pairs for all participants. If not all participants can be matched, an error will be raised. You can then try again or reduce exclusions.
+1. Run the app from the terminal with ``PYTHONPATH=\`pwd\` python app/main.py``
 
 ## Getting your app password
 
 1. Go to your [Google Account](https://myaccount.google.com).
-2. Choose "Security" on the left panel.
-3. Choose "2-Step Verification" under "How you sign in to Google".
-4. Choose "App passwords".
-5. Choose a name and create a new password.
-6. A new random password will be generated. Copy it to your environment as `APP_PASSWORD`.
+1. Choose "Security" on the left panel.
+1. Choose "2-Step Verification" under "How you sign in to Google".
+1. Choose "App passwords".
+1. Choose a name and create a new password.
+1. A new random password will be generated. Copy it to your environment as `APP_PASSWORD`.
 
 It is recommended that you revoke the password after sending the emails, for added security. You can easily generate a new one if needed.
 
