@@ -94,3 +94,7 @@ It is recommended that you do a test run first, to make sure that you got all na
 You can trigger a test run against a test email by setting the `TEST_EMAIL` environment variable. All messages will be sent to the test email rather than the real recipients emails.
 
 To perform a real run, just remove the `TEST_EMAIL` variable from the environment.
+
+## License
+
+See the LICENSE file for license rights and limitations (`GPL-3.0`).
