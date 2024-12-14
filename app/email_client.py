@@ -47,7 +47,9 @@ class EmailClient:
         message.attach(MIMEText(body, "html"))
 
         self.server.sendmail(admin_email, actual_recipient, message.as_string())
-        self.log_file.write(f"Email sent to {giver_name}({giver_email}) with receiver {receiver_name}.\n")
+        self.log_file.write(
+            f"Email sent to {giver_name}({giver_email}) with receiver {receiver_name}.\n"
+        )
 
     def close(self):
         self.server.quit()
