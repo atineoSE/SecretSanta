@@ -79,9 +79,8 @@ A log will be created in your computer with the pairs, in case you need to audit
 ## Getting your app password
 
 1. Go to the [app passwords page](https://myaccount.google.com/apppasswords) of your Google account (if you can't access it, refer to this [help page](https://support.google.com/accounts/answer/185833?hl=en) for support).
-Go to your [Google Account](https://myaccount.google.com).
 1. Choose a name and create a new password.
-1. A new random password will be generated. Copy it to your environment as `APP_PASSWORD`.
+1. A new random password will be generated. Copy it to your environment as `APP_PASSWORD` (be sure to remove the spaces, if present).
 
 It is recommended that you revoke the password after sending the emails, for added security. You can easily generate a new one if needed.
 
