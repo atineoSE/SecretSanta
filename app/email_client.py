@@ -10,9 +10,11 @@ from dotenv import load_dotenv
 from app.email_templates import get_template
 
 
+load_dotenv(override=True)
+
+
 class EmailClient:
     def __init__(self):
-        load_dotenv()
         self.user = os.getenv("ADMIN_USER")
         app_password = os.getenv("APP_PASSWORD")
         if not self.user or not app_password:
