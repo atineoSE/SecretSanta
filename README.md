@@ -67,7 +67,7 @@ A log will be created in your computer with the pairs, in case you need to audit
 
 1. Clone this repo.
 1. Install dependencies with `pip install -r requirements.txt` (a [virtual environment](https://virtualenv.pypa.io/en/latest/) is recommended).
-1. Add your Google account details in the environment: `ADMIN_USER` and `APP_PASSWORD`. You can use a `.env` file at the root directory for convenience.
+1. Add your Google account details in the environment: `ADMIN_USER` and `APP_PASSWORD`. You can use a `.env` file at the root directory for convenience (see [.env.example](.env.example) as guideline).
     - `ADMIN_USER` is your Google account username. Emails will be sent as if written by this user.
     - `APP_PASSWORD` is your app-specific password. See instructions below on how to get your own app password.
 1. Add your desired language to the environment variable `LANG`. Only "ES" (for Spanish) and "EN" (for English) are supported. Default is "ES".
